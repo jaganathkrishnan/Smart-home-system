@@ -1,0 +1,95 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+.container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for the Container */
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+h1 {
+    color: #222;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* LED State Display */
+.led-state {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* LED ON State */
+.led-state.on {
+    background: #4CAF50;
+    color: white;
+}
+
+/* LED OFF State */
+.led-state.off {
+    background: #f44336;
+    color: white;
+}
+
+/* Buttons */
+.button {
+    border: none;
+    padding: 14px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+/* ON Button */
+.button.on {
+    background: linear-gradient(135deg, #4CAF50, #388E3C);
+    color: white;
+}
+
+.button.on:hover {
+    background: linear-gradient(135deg, #45a049, #2E7D32);
+    transform: scale(1.05);
+}
+
+/* OFF Button */
+.button.off {
+    background: linear-gradient(135deg, #f44336, #d32f2f);
+    color: white;
+}
+
+.button.off:hover {
+    background: linear-gradient(135deg, #d32f2f, #b71c1c);
+    transform: scale(1.05);
+}

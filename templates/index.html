@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino LED Control</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Arduino LED Control</h1>
+        <p class="led-state" id="led-state">LED State: OFF</p>
+    </div>
+
+    <script>
+        var socket = io();
+        
+        socket.on('led_state', function(data) {
+            document.getElementById('led-state').innerText = "LED State: " + (data.state ? "ON" : "OFF");
+        });
+    </script>
+</body>
+</html>
